@@ -27,9 +27,9 @@ export default function Board({ guesses, hints, currGuess, currTurn }) {
     console.log(hints);
     return (
         <div>
-            <div className='column'> <Keypad /> </div>
-            
-            <div className='column'>
+            <div className='column1'>Rules!</div>
+            <div className='column2'>
+                <div className='rowborder'></div>
                 {guesses.map((g, i) => {
                 if(currTurn === i)
                 { 
@@ -37,7 +37,9 @@ export default function Board({ guesses, hints, currGuess, currTurn }) {
                 }
                 return <Turn key={i} guess={g} hint={hints[i]} />
                 })}
+                <div className='rowborder'></div>
             </div>
+            <div className='column3'> <Keypad /> </div>
         </div>
         )
 

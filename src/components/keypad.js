@@ -17,7 +17,7 @@ export default function Keypad() {
     colourMap['1'] = 'blue';
     colourMap['2'] = 'yellow';
     colourMap['3'] = 'green';
-    colourMap['4'] = 'brown';
+    colourMap['4'] = 'cyan';
     colourMap['5'] = 'purple';
   return (
     <div className="keypad">

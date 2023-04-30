@@ -9,7 +9,7 @@ export default function Turn({guess, hint}) {
     colourMap['1'] = 'blue';
     colourMap['2'] = 'yellow';
     colourMap['3'] = 'green';
-    colourMap['4'] = 'brown';
+    colourMap['4'] = 'cyan';
     colourMap['5'] = 'purple';
 
     if (guess) {
@@ -22,6 +22,7 @@ export default function Turn({guess, hint}) {
             {[...Array(4 - guess.length)].map((_,i) => (
               <div key={i}></div>
             ))}
+          <div className='gap'></div>
           <Hint key={4} hint={hint} /> 
           </div>
         )
@@ -34,7 +35,8 @@ export default function Turn({guess, hint}) {
         <div></div>
         <div></div>
         <div></div>
-        <Hint key={4} hint={hint} />  
+        <div className='gap'></div>
+        <Hint key={4} hint={hint} /> 
         </div>
       </div>)
     
