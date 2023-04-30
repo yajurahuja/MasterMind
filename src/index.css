@@ -1,0 +1,179 @@
+body {
+  text-align: center;
+  font-size: 1em;
+  font-family: verdana;
+  margin: 0;
+}
+h1 {
+  font-size: 1.5em;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  margin: 0 0 30px 0;
+  color: #333;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+.row {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.row > div {
+  height: 60px;
+  width: 60px;
+  background-color: #ffffff;
+  border-color: #080808;
+  border-style: solid;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 4px;
+  line-height: 50px;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+.row > div.red {
+  background-color: #f80808;
+}
+.row > div.blue{
+  background-color: #0aa8f7;
+}
+.row > div.yellow {
+  background-color: #f8d808;
+}
+.row > div.green{
+  background-color: #08f830;
+}
+.row > div.brown {
+  background-color: #3a2323;
+}
+.row > div.purple {
+  background-color: #8700f5;
+}
+.row .gap{
+  display: block;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ffffff;
+  margin: 4px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 0%;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+.row .hint {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #080808;
+  margin: 4px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 0%;
+  font-weight: bold;
+  font-size: 2.5em;
+
+}
+
+.row .hint > div {
+  display: table-cell;
+  height: 15px;
+  width: 15px;
+  background-color: #f2eeee;
+  border-color: #080808;
+  border-style: solid;
+  border-radius: 50%;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 50px;
+  font-weight: bold;
+  font-size: 2.5em;
+  margin: 6px 6px;
+
+}
+
+
+.row.hint> div.white {
+  background-color: #f2eeee;
+}
+
+.row .hint> div.red {
+  background-color: #f80808;
+}
+
+.row .hint> div.black {
+  background-color: #080808;
+}
+
+.keypad {
+  display: inline;
+  width: 60px;
+  height: 60px;
+  /* margin: 4px; */
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  font-size: 2.0em;
+  
+}
+
+.keypad > .other {
+  height: 60px;
+  width: 160px;
+  background-color: #ffffff;
+  border-color: #080808;
+  border-style: solid;
+  border-radius: 5%;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  /* margin: 10px; */
+  line-height: 50px;
+  font-weight: bold;
+  font-size: 0.7em;
+}
+
+.keypad > div {
+  height: 60px;
+  width: 60px;
+  background-color: #ffffff;
+  border-color: #080808;
+  border-style: solid;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 4px;
+  line-height: 50px;
+  font-weight: bold;
+  font-size: 1.0em;
+}
+
+
+.keypad > div.red {
+  background-color: #f80808;
+}
+.keypad > div.blue{
+  background-color: #0aa8f7;
+}
+.keypad > div.yellow {
+  background-color: #f8d808;
+}
+.keypad > div.green{
+  background-color: #08f830;
+}
+.keypad > div.brown {
+  background-color: #3a2323;
+}
+.keypad > div.purple {
+  background-color: #8700f5;
+}
