@@ -20,16 +20,19 @@ export default function Keypad() {
     colourMap['4'] = 'cyan';
     colourMap['5'] = 'purple';
   return (
+    <div className='keypadbox'>
     <div className="keypad">
         <br />
         <br />
+        <h2>KeyPad</h2>
         {colors.map((l, i) => (
               <div key={i} className={colourMap[l]} onClick={() => onClick(l)}>{l}</div>
         ))}
         <br />
         <br />
     <div key={6} className='other' onClick={() => onClick('Enter')}>Enter</div>
-    <div key={7} className='other' onClick={() => onClick('Backspace')}>Backspace</div>
+    <div key={7} className='other' onClick={() => onClick('Backspace')}>Undo</div>
+    </div>
     </div>
   )
 }

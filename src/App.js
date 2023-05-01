@@ -41,7 +41,7 @@ function App() {
   useEffect(() => {
     // requestAccount();
     // // getNewCombination();
-    // generateCombination();
+    //generateCombination();
   }, [])
 
 
