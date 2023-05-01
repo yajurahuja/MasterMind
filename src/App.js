@@ -47,7 +47,7 @@ function App() {
 
   return (
     <div>
-      {<h1>MASATERMIND</h1>}
+      {<h1>MASTERMIND</h1>}
       {<MmasterMind solContract={solContract} solCombination={solCombination}/>}
       </div>
   );

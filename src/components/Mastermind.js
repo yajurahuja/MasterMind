@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import useMastermind from '../hooks/gamelogic'
 import Board from './Board';
 
@@ -6,9 +6,14 @@ export default function MmasterMind({solContract, solCombination}) {
     //it calls the game logic from functionality 
     const {currTurn, currGuess, isCorrect, guesses, hints, handleInput} = useMastermind({solContract, solCombination}); 
 
+    const onClickPlay = () => {
+        window.location.reload();
+    }
+
     useEffect(() => {
         //run the handleInput function whenever a key is pressed
-        window.addEventListener('keyup', handleInput)
+            window.addEventListener('keyup', handleInput)
+
         if (isCorrect) {
             console.log("You Win!") //TODO
             window.removeEventListener('keyup', handleInput)
@@ -25,7 +30,7 @@ export default function MmasterMind({solContract, solCombination}) {
 
     return (
         <div>
-            {<Board guesses={guesses} hints={hints} currGuess={currGuess} currTurn={currTurn} />}
+            {<Board guesses={guesses} hints={hints} currGuess={currGuess} currTurn={currTurn} onClick={onClickPlay}/>}
         </div>
     )
 }
