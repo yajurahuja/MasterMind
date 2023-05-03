@@ -39,9 +39,9 @@ function App() {
   }
 
   useEffect(() => {
-    // requestAccount();
+    requestAccount();
     // // getNewCombination();
-    //generateCombination();
+    generateCombination();
   }, [])
 
 
