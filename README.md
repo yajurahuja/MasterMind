@@ -54,5 +54,11 @@ The Game should start up in the browser and a pending transaction must appear in
 
 ## Suggestion
 
-Please clear everytime the nonce in the advanced settings before everytime you want to play the game. 
+Please clear everytime the nonce in the advanced settings before everytime you want to play the game. If the game is not proceeding, it is most likely due to the nonce issue. After clearing the nonce, Start the New Game or just refresh. 
 
+## References
+
+https://courses.csail.mit.edu/6.857/2020/projects/13-Gupta-Kaashoek-Wang-Zhao.pdf
+https://alexkuzmin.io/posts/zk-wordle-1/
+https://blog.openreplay.com/build-a-wordle-like-game-using-react/
+https://github.com/iden3/snarkjs
