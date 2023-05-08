@@ -14,19 +14,13 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
-  const Greeter = await hre.ethers.getContractFactory("Greeter"); //The name of the smart contract which we want to deploy
-  const greet = await Greeter.deploy("Hello, hardhat!");
-
-  await greet.deployed();
-
-  console.log("Greeter deployed to:", greet.address);
-
+  
   const MMind = await hre.ethers.getContractFactory("MasterMind");
   const MasterMind = await MMind.deploy("1234");
-
-  await MasterMind.deployed();
   
-  console.log("MasterMind deployed to:", MasterMind.address);
+  await MasterMind.deployed();
+
+  console.log(MasterMind.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

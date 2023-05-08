@@ -48,18 +48,21 @@ export default function useMastermind({solContract, solCombination}){
                 //1) TODO: If correct: Game over and the player wins
                 //2) If false: 
                 //2.1) Call the getProgress function from the smart contract
-                const transaction = await solContract.getProgress(currGuess);
-                await transaction.wait();
-                let currHint = await solContract.returnProgress();
-                setHints(Array => [...Array, currHint]);
-                console.log("Hints Complete");
-                //2.2) Update the hint list
-                //setHints(hints.concat([hint]));
-                setCurrentGuess('');
-                console.log("Success:", success);
-                console.log(guesses);
-                console.log(hints);
-                //update the turn
+                if(!success){
+                    const transaction = await solContract.getProgress(currGuess);
+                    await transaction.wait();
+                    let currHint = await solContract.returnProgress();
+                    setHints(Array => [...Array, currHint]);
+                    console.log("Hint Complete");
+                    //2.2) Update the hint list
+                    //setHints(hints.concat([hint]));
+                    setCurrentGuess('');
+                    console.log("Success:", success);
+                    console.log(guesses);
+                    console.log("Hints:", hints);
+                    //update the turn
+                    
+                }
                 setTurn(turn => turn + 1)
 
             }

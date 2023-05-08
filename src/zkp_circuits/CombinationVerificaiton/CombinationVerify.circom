@@ -56,7 +56,10 @@ template VerifyCombination() {
     //Guess Input for the turn
     signal input guessCombination[4];
     //Hint generated for the turn
+    //Solution Hash for the solution Combination
+    // signal input commitedHash;
     signal output hint[4];
+
     var pins = 4;
 
     //get black pegs: The following loop gets all the black pegs for the hint
@@ -149,8 +152,14 @@ template VerifyCombination() {
     for(var i = 0; i < pins; i++){
         hint[i] <== (blackpegs[i] * 2) + redpegs[i][3].present;
     }
-    //hash the solution
-    //log(hint[0]);
+    //hash the Solution
+    // component solHash = Poseidon(1);
+    // solNumber[4];
+    // for(int i = 0; i < 3; i++)
+    //     solNumber[i+1] = solNumber[i] + solCombination[i+1] * (100 ** (i+1));
+    // solHash.input[0] <== solNumber[3];
+    // solHash.out === commitedHash;
+     
 }
 
 

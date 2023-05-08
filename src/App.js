@@ -2,13 +2,15 @@ import React, {useState, useEffect} from "react";
 import { ethers } from "ethers";
 import MasterMind from './artifacts/contracts/MasterMind.sol/MasterMind.json'
 import MmasterMind from './components/Mastermind';
+const fs = require('fs')
 
-const contractAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
+const contractAddress = "0xA51c1fc2f0D1a1b8494Ed1FE312d7C3a78Ed91C0";
 
 function App() {
   const [solCombination, setSolCombination] = useState("");
   const [solContract, setContract] = useState(null);
   const [signer, setSigner] = useState(null);
+  
 
   async function requestAccount(){
     await window.ethereum.request({method: 'eth_requestAccounts'})
@@ -35,13 +37,12 @@ function App() {
     await transaction.wait();
     setContract(contract);
     getNewCombination();
+
     
   }
-
   useEffect(() => {
     requestAccount();
-    // // getNewCombination();
-    generateCombination();
+    generateCombination();    
   }, [])
 
 
